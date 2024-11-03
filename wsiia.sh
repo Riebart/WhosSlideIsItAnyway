@@ -8,7 +8,7 @@ do
     slide=1
 
     echo "Getting random page" >&2
-    page_name=$(wget -qO- https://en.wikipedia.org/wiki/Special:Random | sed -n 's|<link rel="canonical" href=".*/\(.*\)"/>|\1|p')
+    page_name=$(wget -qO- https://en.wikipedia.org/wiki/Special:Random | sed -n 's|<link rel="canonical" href=".*/\(.*\)">|\1|p')
 
     while [ true ]
     do
